@@ -1,24 +1,13 @@
 import java.util.*;
 
+// implement the GUI 
 public class GPA_Calculator {
+	static algorithm alg = new algorithm();
 	
-	HashMap<String, Double> data = new HashMap<>();
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("hellow world");
-	}
-	
-	public void getCredits() {
-		
-	}	
-	
-	public void getAmountOfClasses() {
-		
-	}
-	
-	public void algorithm () {
-		
+		alg.getUserInput();
 	}
 
 }
