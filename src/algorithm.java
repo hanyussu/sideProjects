@@ -7,11 +7,7 @@ public class algorithm {
 	HashMap<String, Integer> grades = new HashMap<>();
 	
 	public algorithm() {
-		initializeGrades();
-		getUserInput();
-	}
-	
-	public void initializeGrades() {
+		// initalize the grades
 		grades.put("A", 4); // excellent 
 		grades.put("B", 3); // good
 		grades.put("C", 2); // satisfactory 
