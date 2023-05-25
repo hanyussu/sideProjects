@@ -36,17 +36,17 @@ public class algorithm {
 	}
 	
 	public void calculation() {
-		int totalCredites = 0;
-		int maxCredities = amountOfClasses * 4;
+		double totalCredites = 0;
+		double maxCredities = amountOfClasses * 4;
 		for (String dataKey: data.values()) {
 			totalCredites += grades.get(dataKey);
 		}
 		// the division need to be revised
+		// algorithm = (totalCredites/maxCredities) * 4
 		System.out.println(totalCredites);
 		System.out.println(maxCredities);
-		int temp = totalCredites/maxCredities;
-		System.out.println(temp);
-		GPA *= 4;
+		double temp = (totalCredites/maxCredities);
+		GPA =temp * 4;
 		System.out.println(GPA);
 	}
 	
