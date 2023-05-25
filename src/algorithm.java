@@ -3,8 +3,10 @@ import java.util.*;
 // build up the basic algorithm 
 public class algorithm {
 	
-	HashMap<String, Integer> data = new HashMap<>();
+	HashMap<String, String> data = new HashMap<>();
 	HashMap<String, Integer> grades = new HashMap<>();
+	int amountOfClasses = 0;
+	double GPA = 0;
 	
 	public algorithm() {
 		// initalize the grades
@@ -15,14 +17,37 @@ public class algorithm {
 	}
 	
 	public void getUserInput () {
-		System.out.println("Enter the name of the class: ");
-		Scanner scanner1 = new Scanner(System.in);  // Reading from System.in
-		String s = scanner1.next();
-		System.out.println("Enter the crdits of the class: ");
-		Scanner scanner2 = new Scanner(System.in);  // Reading from System.in
-		int i = scanner2.nextInt();
-		data.put(s,i);
+		System.out.println("How many classes do you take this semester: ");
+		Scanner scanner = new Scanner(System.in);
+		amountOfClasses = scanner.nextInt();
+		for(int i =0; i < amountOfClasses; i++) {
+			System.out.println("Enter the name of the class: ");
+			Scanner scanner1 = new Scanner(System.in);  // Reading from System.in
+			String s1 = scanner1.next();
+			System.out.println("Enter the grade of the class: ");
+			Scanner scanner2 = new Scanner(System.in);  // Reading from System.in
+			String s2 = scanner2.next();
+			data.put(s1,s2);
+			}
+		
 		System.out.println(data);
+		System.out.println(grades);
+		calculation();
+	}
+	
+	public void calculation() {
+		int totalCredites = 0;
+		int maxCredities = amountOfClasses * 4;
+		for (String dataKey: data.values()) {
+			totalCredites += grades.get(dataKey);
+		}
+		// the division need to be revised
+		System.out.println(totalCredites);
+		System.out.println(maxCredities);
+		int temp = totalCredites/maxCredities;
+		System.out.println(temp);
+		GPA *= 4;
+		System.out.println(GPA);
 	}
 	
 }
