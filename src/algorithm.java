@@ -29,9 +29,6 @@ public class algorithm {
 			String s2 = scanner2.next();
 			data.put(s1,s2);
 			}
-		
-		System.out.println(data);
-		System.out.println(grades);
 		calculation();
 	}
 	
@@ -47,7 +44,11 @@ public class algorithm {
 		System.out.println(maxCredities);
 		double temp = (totalCredites/maxCredities);
 		GPA =temp * 4;
+	}
+	
+	public double getGPA() {
 		System.out.println(GPA);
+		return GPA;
 	}
 	
 }
