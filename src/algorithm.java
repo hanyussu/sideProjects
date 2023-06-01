@@ -38,8 +38,6 @@ public class algorithm {
 		for (String dataKey: data.values()) {
 			totalCredites += grades.get(dataKey);
 		}
-		// the division need to be revised
-		// algorithm = (totalCredites/maxCredities) * 4
 		System.out.println(totalCredites);
 		System.out.println(maxCredities);
 		double temp = (totalCredites/maxCredities);
